@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, th, td {
+          border:1px solid black;
+          padding: 3px;
+        }
+    </style>
+    <title>Search</title>
+</head>
+<body>
+
+    <br><br><br>
+    <div style="text-align: center;">
+
+        <form action="" method="POST" autocomplete="off">
+        
+            <label style="margin-left: -100px;">Enter Phone Number</label><br>
+            <input type="text" name="contact" id="" required>
+        
+            <button type="submit">Submit</button>
+
+        </form>
+
+
+        <br>
+        <br>
+        {% if noResult %}
+            <p>*** No Results found ***</p>
+        {%endif%}
+        <br>
+
+        {%if posted %}
+        <div>
+            <table style="margin-left:auto;margin-right:auto">
+                <tr>
+                    <td>Name</td>
+                    <td> {{firstname}} </td>
+                </tr>
+                <tr>
+                    <td>Surname</td>
+                    <td> {{surname}} </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td> {{email}} </td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td> {{contact}} </td>
+                </tr>
+                <tr>
+                    <td>Github</td>
+                    <td> {{github}} </td>
+                </tr>
+            </table>
+        </div>
+        {%endif%}
+
+        
+    </div>
+
+</body>
+</html>
