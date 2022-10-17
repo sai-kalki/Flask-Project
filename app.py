@@ -28,7 +28,7 @@ conn = pyodbc.connect("Driver = {SQL Server};"
 
 
 
-
+@app.route("/",methods=["POST","GET"])
 @app.route("/index",methods=["POST","GET"])
 def index():
     if request.method=="POST":
